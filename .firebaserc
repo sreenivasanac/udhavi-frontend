@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "staging": "udhavi-frontend",
+    "default": "udhavi-frontend"
+  }
+}
