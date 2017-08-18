@@ -13,5 +13,12 @@
   "bugs": {
     "url": "https://github.com/gurayyarar/AdminBSBMaterialDesign/issues"
   },
-  "homepage": "https://github.com/gurayyarar/AdminBSBMaterialDesign#readme"
+  "homepage": "https://github.com/gurayyarar/AdminBSBMaterialDesign#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "sw-precache": "^5.2.0"
+  },
+  "dependencies": {}
 }
