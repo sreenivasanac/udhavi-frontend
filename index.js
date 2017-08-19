@@ -29,6 +29,19 @@ app.get('/i-need-help',function(req,res){
 	res.render('i-need-help');
 });
 
+app.get('/i-can-help',function(req,res){
+	res.render('i-can-help');
+});
+
+app.get('/feed',function(req,res){
+	res.render('feed');
+});
+
+app.get('/map',function(req,res){
+	res.render('map');
+});
+
+
 // app.get('/forgot-password',function(req,res){
 // 	res.render('forgot-password');
 // });

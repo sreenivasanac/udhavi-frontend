@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<% include ./head %> 
+
+<body class="theme-red">
+
+    <% include ./page_loader %> 
+
+    <!-- Overlay For Sidebars -->
+    <!-- <div class="overlay"></div> -->
+    <!-- #END# Overlay For Sidebars -->
+
+    <!-- Search Bar -->
+    <% include ./search_bar %> 
+    <!-- #END# Search Bar -->
+
+    <% include ./navbar %> 
+
+    <% include ./sidebar %>
+
+    <% include ./maps_partial %>
+
+    <% include ./include_js_plugins %>
+    
+    <% include ./include_custom_js %>
+
+    <!-- Demo Js -->
+    <script src="js/demo.js"></script>
+
+    <!-- Registering Service worker for Offline viewing IMPORTANT -->
+<!--     <script src="./service-worker-registration.js"></script>
+    <script src="./service-worker.js"></script> -->
+</body>
+
+</html>
