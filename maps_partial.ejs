@@ -1,151 +1,282 @@
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_c4_EBV-KAwNW-spKgCus2ToE7k_PFVc&callback=initMap">
+    </script>
+
+<script>
+      function initMap() {
+        var chennai = {lat: 12.993555, lng: 80.243201};
+        var map = new google.maps.Map(document.getElementById('gmap_basic_example'), {
+          zoom: 13,
+          center: chennai,
+          styles: [
+              {
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#ebe3cd"
+                  }
+                ]
+              },
+              {
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#523735"
+                  }
+                ]
+              },
+              {
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                  {
+                    "color": "#f5f1e6"
+                  }
+                ]
+              },
+              {
+                "featureType": "administrative",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                  {
+                    "color": "#c9b2a6"
+                  }
+                ]
+              },
+              {
+                "featureType": "administrative.land_parcel",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                  {
+                    "color": "#dcd2be"
+                  }
+                ]
+              },
+              {
+                "featureType": "administrative.land_parcel",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#ae9e90"
+                  }
+                ]
+              },
+              {
+                "featureType": "landscape.natural",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#dfd2ae"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#dfd2ae"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#93817c"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi.business",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi.park",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#a5b076"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi.park",
+                "elementType": "labels.text",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi.park",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#447530"
+                  }
+                ]
+              },
+              {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#f5f1e6"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.arterial",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#fdfcf8"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.highway",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#f8c967"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                  {
+                    "color": "#e9bc62"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.highway.controlled_access",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#e98d58"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.highway.controlled_access",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                  {
+                    "color": "#db8555"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.local",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#806b63"
+                  }
+                ]
+              },
+              {
+                "featureType": "transit.line",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#dfd2ae"
+                  }
+                ]
+              },
+              {
+                "featureType": "transit.line",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#8f7d77"
+                  }
+                ]
+              },
+              {
+                "featureType": "transit.line",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                  {
+                    "color": "#ebe3cd"
+                  }
+                ]
+              },
+              {
+                "featureType": "transit.station",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#dfd2ae"
+                  }
+                ]
+              },
+              {
+                "featureType": "water",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#b9d3c2"
+                  }
+                ]
+              },
+              {
+                "featureType": "water",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#92998d"
+                  }
+                ]
+              }
+            ]
+        });
+        var marker = new google.maps.Marker({
+          position: chennai,
+          map: map
+        });
+      }
+    </script>    
 <section class="content">
-    <div class="container-fluid">
-        <!-- Google Maps -->
-        <div class="block-header">
-            <h2>
-                GOOGLE MAPS
-                <small>Taken from <a href="https://developers.google.com/maps/" target="_blank">developers.google.com/maps</a> & <a href="https://hpneo.github.io/gmaps/" target="_blank">hpneo.github.io/gmaps</a></small>
-            </h2>
-        </div>
-        <div class="alert alert-warning">
-            You need to get <b>Google Map API Key</b> for display maps with <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" class="alert-link" target="_blank">this link</a> (Also you can find documentation on same page).
-        </div>
-        <!-- Basic Example -->
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>
-                            BASIC EXAMPLE
-                        </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div id="gmap_basic_example" class="gmap"></div>
+        <div class="container-fluid">
+            <!-- Google Maps -->
+            <div class="block-header">
+                <h2>
+                    Control DashBoard 
+                    
+                </h2>
+            </div>
+        
+            <!-- Basic Example -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                Current Requests
+                            </h2>
+                           
+                        </div>
+                        <div class="body">
+                            <div id="gmap_basic_example" class="gmap"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- #END# Basic Example -->
-        <!-- Markers -->
+          
+            
+               </div>
+               </section>
 
-        <!-- #END# Markers -->
-        <!-- Static Maps -->
-        <div class="row clearfix">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>
-                            STATIC MAPS
-                        </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div id="gmap_static_map" class="gmap"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>
-                            STATIC MAPS - WITH MARKERS
-                        </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div id="gmap_static_map_with_markers" class="gmap"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>
-                            STATIC MAPS - WITH POLYLINE
-                        </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div id="gmap_static_map_polyline" class="gmap"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- #END# Static Maps -->
-        <!-- Panorama (Street View) -->
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="card">
-                    <div class="header">
-                        <h2>
-                            PANORAMA (STREET VIEW)
-                        </h2>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <div id="gmap_panorama" class="gmap"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- #END# Panorama (Street View) -->
-    </div>
-</section>
+               
+               <script src="../../plugins/gmaps/gmaps.js"></script>
+               
