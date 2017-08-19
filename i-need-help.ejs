@@ -31,14 +31,15 @@
     <!-- Registering Service worker for Offline viewing IMPORTANT -->
 <!--     <script src="./service-worker-registration.js"></script>
     <script src="./service-worker.js"></script> -->
-    <script>
     <script type="text/javascript">
         $(".add-items").click(function(){
-            var phonenumber = $("#mobile_number")[0].value;
-            var name = $("#user_name")[0].value;
+            var form = event.target.form;
+            var item = $(form).find(".item-value")[0].value;
+            var quantity = $(form).find(".quantity-value")[0].value;
+            var units = $(form).find(".units-value")[0].value;
 
-            $.post("http://labs.balaaagi.me:9108/udhavisignup", {phonenumber : phonenumber, name: name}, function(data){ console.log(data); }).fail(function(){ alert("failed");  });});
-    </script>
+            $.post("http://labs.balaaagi.me:9108/addrequest", {itemname: item, quantity: quantity, unit: units, latitude: "2", longitude: "2", forwhom: "3", userid: "2"}, function(data){ alert("success"); }).fail(function(){ alert("failed");  });
+        });
     </script>
 </body>
 

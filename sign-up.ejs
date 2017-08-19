@@ -36,7 +36,7 @@
             var phonenumber = $("#mobile_number")[0].value;
             var name = $("#user_name")[0].value;
 
-            $.post("http://labs.balaaagi.me:9108/udhavisignup", {phonenumber : phonenumber, name: name}, function(data){ console.log(data); }).fail(function(){ alert("failed");  });});
+            $.post("http://labs.balaaagi.me:9108/udhavisignup", {phonenumber : phonenumber, name: name}, function(data){ window.location.assign("/index"); }).fail(function(){ alert("failed");  });});
     </script>
 </body>
 
