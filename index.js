@@ -59,6 +59,6 @@ app.get('/map',function(req,res){
 
 //End of Routes
 
-app.listen(3000, function () {
-	console.log('Example app listening on port 3000!')
+app.listen(5020, function () {
+	console.log('Example app listening on port 5020!')
 });
