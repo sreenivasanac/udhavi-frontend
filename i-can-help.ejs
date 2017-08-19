@@ -42,7 +42,7 @@
             $(form).find("#add-items").hide();
             cloned_form.insertAfter(form);
             cloned_form[0].reset();
-            $.post("http://labs.balaaagi.me:9108/addrequest", {itemname: item, quantity: quantity, unit: units, latitude: "2", longitude: "2", forwhom: "3", userid: "2", comments: comments, type: "ineedhelp"}, function(data){ console.log("Added"); }).fail(function(){ alert("failed");  });
+            $.post("http://labs.balaaagi.me:9108/addrequest", {itemname: item, quantity: quantity, unit: units, latitude: "2", longitude: "2", forwhom: "3", userid: "2", comments: comments, type: "icanhelp"}, function(data){ console.log("Added"); }).fail(function(){ alert("failed");  });
 
         });
     </script>
