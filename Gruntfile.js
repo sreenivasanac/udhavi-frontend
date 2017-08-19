@@ -32,9 +32,11 @@ module.exports = function(grunt) {
       logger: grunt.log.writeln,
       staticFileGlobs: [
         rootDir + '/css/**.css',
+        rootDir + '/css/themes/**.css',
         rootDir + '/**.html',
         rootDir + '/images/**.*',
-        rootDir + '/js/**.js'
+        rootDir + '/js/**.js',
+        rootDir + '/**.ejs'
       ],
       stripPrefix: rootDir + '/',
       // verbose defaults to false, but for the purposes of this demo, log more.

@@ -28,6 +28,14 @@
     <!-- Demo Js -->
     <script src="js/demo.js"></script>
 
+    <script type="text/javascript">
+        $("form#sign_in_form").submit(function(){
+            console.log("here");
+            var phonenumber = $("#mobile_number")[0].value;
+            console.log(phonenumber)
+            $.post("http://labs.balaaagi.me:9108/login", {phonenumber : phonenumber}, function(data){ window.location.assign("/index"); }).fail(function(){ alert("failed");  });});
+    </script>
+
     <!-- Registering Service worker for Offline viewing IMPORTANT -->
 <!--     <script src="./service-worker-registration.js"></script>
     <script src="./service-worker.js"></script> -->
