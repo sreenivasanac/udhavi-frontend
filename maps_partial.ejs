@@ -2,7 +2,24 @@
     </script>
 
 <script>
-      function initMap() {
+        function initMap() {
+            var openRequests=[];
+            $.get("http://labs.balaaagi.me:9108/getopenrequests", function(data){ 
+                // console.log(data); 
+                openRequests = data.requests;
+            console.log(openRequests); 
+            for (var i=0, l=openRequests.length; i<l; i++){
+                current = openRequests[i];
+                console.log(current);
+                console.log(current['latitude']);
+                var currentRequestPosition={lat:parseFloat(current['latitude']),lng:parseFloat(current['longitude'])};
+                console.log(currentRequestPosition);
+                var marker = new google.maps.Marker({
+                  position: currentRequestPosition,
+                  map: map
+                });
+                }     
+            }).fail(function(){ alert("failed");  });
         var chennai = {lat: 12.993555, lng: 80.243201};
         var map = new google.maps.Map(document.getElementById('gmap_basic_example'), {
           zoom: 13,
@@ -240,12 +257,13 @@
               }
             ]
         });
-        var marker = new google.maps.Marker({
-          position: chennai,
-          map: map
-        });
+
+        // console.log(openRequests);
+        
+        
       }
-    </script>    
+    </script>
+   
 <section class="content">
         <div class="container-fluid">
             <!-- Google Maps -->
