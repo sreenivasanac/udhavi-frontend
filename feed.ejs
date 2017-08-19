@@ -27,7 +27,27 @@
 
     <script type="text/javascript">
         (function($){
-            $.get("http://labs.balaaagi.me:9108/getopenrequests", function(data){ console.log(data); }).fail(function(){ alert("failed");  });
+            $.get("http://labs.balaaagi.me:9108/getopenrequests", function(data){ 
+                console.log(data); 
+
+                var response = data.requests;
+                response = response.slice(Math.max(response.length-5, 1));
+                for (var i=0, l=response.length; i<l; i++){
+                    console.log("xyz" + $(".card-div").length);
+                    var card = $(".card-div:last");
+                    var card_clone;
+
+                    if(i == 0){card = $(".card-div:first"); card_clone = card; }
+                    else {card = $(".card-div:last"); card_clone = card.clone();}
+                    current = response[i];
+                    console.log("current");
+                    console.log(current);
+                    $(card_clone).find("#card-title")[0].innerHTML = current["itemquantity"] + " " + current["itemquantityUnit"] + " of " + current["itemname"] + " required";
+                    $(card_clone).find("#card-person")[0].innerHTML = "sdlkfjlksdfj";
+                    $(card_clone).find("#card-description")[0].innerHTML = "sdlkfjlksdfj";
+                    card_clone.insertAfter(card);
+                }
+            }).fail(function(){ alert("failed");  });
         })(jQuery);
     </script>
 
