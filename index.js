@@ -13,6 +13,13 @@ app.get('/',function(req,res){
 	res.render('index1');
 });
 
+app.get('/index',function(req,res){
+	res.render('index1');
+});
+
+app.get('/sign-in',function(req,res){
+	res.render('sign-in');
+});
 
 // app.use(function (err, req, res, next) {
 //   console.error(err.stack)
