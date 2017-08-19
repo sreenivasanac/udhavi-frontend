@@ -21,6 +21,19 @@ app.get('/sign-in',function(req,res){
 	res.render('sign-in');
 });
 
+app.get('/sign-up',function(req,res){
+	res.render('sign-up');
+});
+
+app.get('/i-need-help',function(req,res){
+	res.render('i-need-help');
+});
+
+// app.get('/forgot-password',function(req,res){
+// 	res.render('forgot-password');
+// });
+
+
 // app.use(function (err, req, res, next) {
 //   console.error(err.stack)
 //   res.status(404).render('404');

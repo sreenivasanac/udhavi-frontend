@@ -1,7 +1,7 @@
 <section class="content">
     <div class="container-fluid">
         <div class="block-header">
-            <h2>Login</h2>
+            <h2>Register</h2>
         </div>
 
         <!-- Vertical Layout -->
@@ -10,7 +10,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            LOGIN
+                            REGISTER
                         </h2>
                         <ul class="header-dropdown m-r--5">
                             <li class="dropdown">
@@ -27,10 +27,16 @@
                     </div>
                     <div class="body">
                         <form>
+                            <label for="email_address">Name</label>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" id="user_name" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
                             <label for="email_address">Mobile Number</label>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="email_address" class="form-control" placeholder="Enter your Mobile Number">
+                                    <input type="text" id="mobile_number" class="form-control" placeholder="Enter your Mobile Number">
                                 </div>
                             </div>
                             <label for="password">Password</label>
@@ -43,13 +49,10 @@
                             <input type="checkbox" id="remember_me" class="filled-in">
                             <label for="remember_me">Remember Me</label>
                             <br>
-                            <button type="button" class="btn btn-primary m-t-15 waves-effect">LOGIN</button>
+                            <button type="button" id="register" class="btn btn-primary m-t-15 waves-effect">REGISTER</button>
                             <div class="row m-t-15 m-l-20">
                                 <div class="col-xs-6">
-                                    <a href="/sign-up">Register Now!</a>
-                                </div>
-                                <div class="col-xs-6 align-right">
-                                    <a href="/forgot-password">Forgot Password?</a>
+                                    <a href="/sign-in">Login!</a>
                                 </div>
                             </div>
                         </form>
