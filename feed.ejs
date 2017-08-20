@@ -2,7 +2,11 @@
 <html>
 
 <% include ./head %> 
-
+<style type="text/css">
+    #card-description {
+        min-height: 80px;
+    }
+</style>
 <body class="theme-red">
 
     <% include ./page_loader %> 
@@ -32,7 +36,7 @@
                 console.log(data); 
 
                 var response = data.requests;
-                response = response.slice(Math.max(response.length-5, 1));
+                response = response.slice(Math.max(response.length-7, 1));
                 for (var i=0, l=response.length; i<l; i++){
                     console.log("xyz" + $(".card-div").length);
                     var card = $(".card-div:last");
@@ -44,8 +48,9 @@
                     console.log("current");
                     console.log(current);
                     $(card_clone).find("#card-title")[0].innerHTML = current["itemquantity"] + " " + current["itemquantityUnit"] + " of " + current["itemname"] + " required";
-                    $(card_clone).find("#card-person")[0].innerHTML = "sdlkfjlksdfj";
-                    $(card_clone).find("#card-description")[0].innerHTML = "sdlkfjlksdfj";
+                    var names_array = ["Sreenivasan", "Rajesh", "Priyanka", "Karthick"];
+                    $(card_clone).find("#card-person")[0].innerHTML = names_array[Math.floor(Math.random() * names_array.length)];
+                    $(card_clone).find("#card-description")[0].innerHTML = current["comments"];
                     card_clone.insertAfter(card);
                 }
             }).fail(function(){ alert("failed");  });
