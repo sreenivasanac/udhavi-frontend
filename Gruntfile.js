@@ -14,7 +14,7 @@ module.exports = function(grunt) {
     swPrecache: {
       dev: {
         handleFetch: false,
-        rootDir: ''
+        rootDir: './'
       }
     }
   });
@@ -23,7 +23,22 @@ module.exports = function(grunt) {
     var config = {
       cacheId: packageJson.name,
       dynamicUrlToDependencies: {
+        '/': ['./index1.ejs', './page_loader.ejs', './search_bar.ejs', './navbar.ejs', './sidebar.ejs', './dashboard.ejs', './include_js_plugins.ejs', './include_custom_js.ejs', 'js/demo.js'],
+        '/sign-in': ['./sign-in.ejs', 'sign-in-partial.ejs', './index1.ejs', './page_loader.ejs', './search_bar.ejs', './navbar.ejs', './sidebar.ejs', './dashboard.ejs', './include_js_plugins.ejs', './include_custom_js.ejs', 'js/demo.js']
       },
+      runtimeCaching: [{
+        urlPattern: /^https:\/\/udhavi.herokuapp\.com/,
+        handler: 'cacheFirst'
+      }, {
+        urlPattern: /\/sign-in\//,
+        handler: 'fastest',
+        options: {
+            cache: {
+              maxEntries: 10,
+              name: 'sign-in'
+            }
+        }
+      }],
       // If handleFetch is false (i.e. because this is called from swPrecache:dev), then
       // the service worker will precache resources but won't actually serve them.
       // This allows you to test precaching behavior without worry about the cache preventing your

@@ -4,7 +4,7 @@ var ejs = require('ejs');
 var path = require('path');
 
 app.use(express.static(path.join(__dirname, '/')));
-
+app.set('port', (process.env.PORT || 5020));
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/'));

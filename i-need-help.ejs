@@ -29,22 +29,22 @@
     <script src="js/demo.js"></script>
 
     <!-- Registering Service worker for Offline viewing IMPORTANT -->
-<!--     <script src="./service-worker-registration.js"></script>
-    <script src="./service-worker.js"></script> -->
+    <script src="./service-worker-registration.js"></script>
+    <script src="./service-worker.js"></script>
     <script type="text/javascript">
-        $(".add-items").click(function(){
-            var form = event.target.form;
-            var item = $(form).find(".item-value")[0].value;
-            var quantity = $(form).find(".quantity-value")[0].value;
-            var units = $(form).find(".units-value")[0].value;
-            var comments = $(form).find(".comments")[0].value;
-            cloned_form = $(form).clone();
-            $(form).find("#add-items").hide();
-            cloned_form.insertAfter(form);
-            cloned_form[0].reset();
-            $.post("http://labs.balaaagi.me:9108/addrequest", {itemname: item, quantity: quantity, unit: units, latitude: "2", longitude: "2", forwhom: "3", userid: "2", comments: comments, type: "ineedhelp"}, function(data){ console.log("Added"); }).fail(function(){ alert("failed");  });
+    $(".add-items").click(function(){
+        var form = event.target.form;
+        var item = $(form).find(".item-value")[0].value;
+        var quantity = $(form).find(".quantity-value")[0].value;
+        var units = $(form).find(".units-value")[0].value;
+        var comments = $(form).find(".comments")[0].value;
+        cloned_form = $(form).clone();
+        $(form).find("#add-items").hide();
+        cloned_form.insertAfter(form);
+        cloned_form[0].reset();
+        $.post("http://labs.balaaagi.me:9108/addrequest", {itemname: item, quantity: quantity, unit: units, latitude: "2", longitude: "2", forwhom: "3", userid: "2", comments: comments, type: "ineedhelp"}, function(data){ console.log("Added"); }).fail(function(){ alert("failed");  });
 
-        });
+    });
     </script>
 </body>
 
