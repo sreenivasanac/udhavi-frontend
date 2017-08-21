@@ -1,75 +1,57 @@
-AdminBSB - Material Design
+Udhavi - Disaster Management
 =======================
-[![npm version](https://img.shields.io/npm/v/adminbsb-materialdesign.svg)](https://www.npmjs.com/package/adminbsb-materialdesign)
-![Bower version](https://img.shields.io/bower/v/adminbsb-materialdesign.svg)
 
-**AdminBSB - Material Design is a fully responsive and free admin template.** It was developed with [Bootstrap 3.x Framework](http://getbootstrap.com) and [Google Material Design](https://material.google.com) of powers.
+Disaster management app
+----------------  
 
-It's really easy to customize and usage. You can use for from 320px to large resolution pixels of new generation screens and mobile devices. (**Fully Responsive Material Design**)
+What is your idea really about? (Keep it brief)
+Simple Application for managing Rescue and Relief operations and for connecting people who are interested to help with people who are in need of help (like basic amenities and rescue) during Diasters (eg Chennai floods).
+Amenities resource and human resource critical - better management
+During Chennai floods, lots of people were affected and lots of volunteers were willing to help. The rescue and relief operations were primarily done by Facebook posts, whatsapp messages and Google Sheets - but we feel it wasn’t consolidated. There were stale information about someone in dire need, but turned out they have been rescued long back. There wasn’t realtime information on which places need the most help. Contacts (email, mobile numbers) of people willing to help were misused. Fake and stale information were spread.
+Matching people who need rescue or basic amenities (food, medicine, water, clothes, blanket, blood) with people who are willing to help
+URL very shareable. This will be source of truth. Even if we find another person in need in whatsapp or facebook post, a volunteer can add it in this app for further sharing.
+NGO Team management
+Dashboard with people’s activity
+Realtime location-based information and analytics of which locations need more help
+Find nearby people to help
+Information on Safety precautions to follow, working contacts of government and NGO people to contact. Shareable. People upvote working numbers.
+We can call directly from app. Also data like number of people who have tried to call, number of people who have viewed the page will be available - for better informed decision.
+Ability to upload photo when relief is satisfied
+Credit page for team - with stats on their relief
+Works offline
+Feed of activities 
 
-Looking for Premium Templates or Make Donation?
-----------------
-**If you need more features or if you want to make donation with buying template, please visit portfolio of mine which page link is [https://themeforest.net/user/gurayyarar/portfolio](http://bit.ly/2oPFpmQ)**
+Future possible features:
+Alias email (like emails used in craigslist) and (possibly) alias mobile number to protect people willing to help. Email and mobile numbers were misused, some sold to ad companies. Some women were harassed. 
 
-Demo
-----------------
-You can check the website preview with **[this link](https://gurayyarar.github.io/AdminBSBMaterialDesign/)**  
+Advantages:
+Solves By-stander effect. 
+Solves stale information
+Better decisions through data
+Rescue Team & inventory management
 
-![AdminBSB - Free Admin Template With Material Design](https://raw.githubusercontent.com/gurayyarar/AdminBSBMaterialDesign/master/images/screenshot.png)
+Tech advantages
+Works offline
+Low network
 
-Installation
-----------------
-You can choose one from multiple ways for installation.
+What kind of disasters:
+High frequency, low to medium impact
+Storm, heavy rain, extreme heat, hazards, disease,  Low impact earthquake, cyclone, floods, snow
 
-**GitHub**
-- Fork the repository ([here is the guide](https://help.github.com/articles/fork-a-repo/)).
-- Clone to your machine
-```
-git clone https://github.com/gurayyarar/AdminBSBMaterialDesign.git
-```
+Why would you do this? Tell us your motivation to build this
 
-**npm**
-```
-npm install adminbsb-materialdesign
-```
-
-**bower**
-```
-bower install adminbsb-materialdesign
-```
-
-Documentation
-----------
-Visit the **[documentation](https://gurayyarar.github.io/AdminBSBMaterialDesign/documentation/)**
-
-Browser Support
-----------
-- IE 10 +
-- Microsoft Edge (Latest)
-- Mozilla Firefox (Latest)
-- Google Chrome (Latest)
-- Opera (Latest)
-- Safari (Latest)
-
-Change Logs
-----------
-You can display all release notes with **[this link](https://gurayyarar.github.io/AdminBSBMaterialDesign/pages/changelogs.html)**
+In India we increasingly have more volunteers primarily youngsters willing to help during emergency. Our Government isn’t prepared to handle diasters at bigger scales. We get water-logged even for 2-3 days of rain.
 
 
-FAQ
-===
-**Can I use this template for personal or commercial websites/web projects?**  
-Sure, you can use both of personal and commercial websites/web projects.
+Features:
+Ability for Individuals affected - to post the amenities they require - like food, clean water, rescue, medicine, blankets, etc - structured as possible
+Possibly ability to upload photo giving their situation for better understanding
+About page
+Ability for individuals for giving their location
+Ability to share the above requirement via url in social media. This could be source of truth - once it is satisfied this will be marked done.
+Possiblly ability to upload photo after relief is done
+Ability for disaster relief teams, NGOs to form and groups as teams to better manage their rescue operations
+Map view to have better understanding of places affected
+Ability to find nearby people to help
+Verified Emergency contact info of working government officials in the area - workflow to verify and add contact details - structured like electricity board, police, hospitals, etc
 
-**Is the attribution link required?**  
-No, not required. (Though very much appreciated)
-
-License
-----------
-**AdminBSB - Material Design** is an open source project that is licensed under the [MIT license](http://opensource.org/licenses/MIT).
-
-Donations
-----------
-Donations are **greatly appreciated!**
-
-**[DONATE WITH BUY PREMIUM TEMPLATE](http://bit.ly/2oPFpmQ)**
